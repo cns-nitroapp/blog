@@ -11,3 +11,9 @@
 .title-padding{
     padding-top: 2%;
 }
+
+@media only screen and (max-width: 600px) {
+    .status {
+      display: none;
+    }
+  }
