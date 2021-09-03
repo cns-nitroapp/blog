@@ -4,6 +4,10 @@
     padding: 4px 15px!important;
     border-radius: 8px;
     font-style: normal !important;
-    font-weight: bold;
+    font-weight: 600;
     text-align: center!important;
+}
+
+.title-padding{
+    padding-top: 2%;
 }
