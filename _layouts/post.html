@@ -6,7 +6,8 @@ layout: default
 
   <div class="post-info">
     {% if page.date %}
-      <time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }} <span class="w3-tag w3-padding w3-round-large w3-red w3-center">{{ page.author }}</span></time>
+      <span class="author">{{ page.author }}</span><br>
+      <time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
     {% endif %}
   </div>
   <h1 class="post-title">
