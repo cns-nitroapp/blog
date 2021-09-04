@@ -3,16 +3,14 @@ const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-s
 const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
 
 function enableDarkmode() {
-    body = 'black';
+    document.body.style.background = 'black';
 }
 
 function enableLightmode() {
-    body = '#fff';
+    document.body.style.background = '#fff';
 }
 
 function mode() {
-
-    var body = document.body.style.background
 
     if (userPrefersDark) {
         console.log('Previously Darkmode - Changed to Lightmode');
