@@ -17,3 +17,35 @@
       display: none;
     }
   }
+
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: black;
+    }
+    .catalogue-item {
+      color: #aaa;
+      border-bottom: 1px solid #353535;
+    }
+    .catalogue-title {
+      color: #e7e6fa;
+    }
+    .pagination {
+      border-top: 0.5px solid #353535
+    }
+    .author {
+      color: #e7e6fa!important;
+      background-color: #4339f2!important;
+    }
+    .text-black {
+      color: rgba(255,255,255,var(--tw-text-opacity));
+    }
+    .bg-gray-100 {
+      background-color: rgba(33,33,33,var(--tw-bg-opacity));
+    }
+    .border-gray-200 {
+      border-color: rgba(0,0,0,var(--tw-border-opacity));
+    }
+    bg-gray-100:hover {
+      background-color: black;
+    }
+}
