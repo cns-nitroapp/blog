@@ -32,7 +32,14 @@
       color: #aaa;
       border-bottom: 1px solid #353535;
     }
+    .page p {
+      color: #aaa;
+      border-bottom: 1px solid #353535;
+    }
     .catalogue-title {
+      color: #e7e6fa;
+    }
+    .title-padding {
       color: #e7e6fa;
     }
     .page-title {
@@ -59,5 +66,8 @@
     }
     .logo {
       filter: invert(0%);
+    }
+    .nav a {
+      color: #ccc
     }
 }
