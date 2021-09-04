@@ -9,5 +9,6 @@ function mode() {
     }
     else {
         console.log('Lightmode')
+        body = "black"
     }
 }
