@@ -12,6 +12,11 @@
     padding-top: 2%;
 }
 
+.img {
+  width: 2em;
+  filter: invert(100%);
+}
+
 @media only screen and (max-width: 600px) {
     .status {
       display: none;
@@ -45,7 +50,10 @@
     .border-gray-200 {
       border-color: rgba(0,0,0,var(--tw-border-opacity));
     }
-    bg-gray-100:hover {
+    .bg-gray-100:hover {
       background-color: black;
+    }
+    .img {
+      filter: invert(0%);
     }
 }
