@@ -1,10 +1,10 @@
 function mode() {
 
-    var body = document.getElementsByTagName('body')[0].style
+    var body = document.body.style.background
 
     console.log(body)
 
-    if (body = 'background-color: black') {
+    if (body = 'black') {
         console.log('Darkmode')
     }
     else {
