@@ -1,6 +1,22 @@
-const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+const userPrefersDark;
+const userPrefersLight;
 
-const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+function ifLight(mode, boolean) {
+    const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+
+    if (mode == 'get') {
+        if (userPrefersLight) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    else if (mode == 'set') {
+        userPrefersLight = boolean
+    }
+
+}
 
 function enableDarkmode() {
     document.body.style.background = 'black';
@@ -12,11 +28,11 @@ function enableLightmode() {
 
 function mode() {
 
-    if (userPrefersDark) {
+    if (ifLight('get', '') == false) {
         console.log('Previously Darkmode - Changed to Lightmode');
         enableLightmode();
     }
-    else if (userPrefersLight) {
+    else if (ifLight('get', '') == true) {
         console.log('Previously Lightmode - Changed to Darkmode');
         enableDarkmode();
     }
