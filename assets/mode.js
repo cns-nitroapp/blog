@@ -1,6 +1,3 @@
-const userPrefersDark;
-const userPrefersLight;
-
 function ifLight(mode, boolean) {
     const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
 
