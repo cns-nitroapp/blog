@@ -4,11 +4,12 @@ function mode() {
 
     console.log(body)
 
-    if (body = 'black') {
-        console.log('Darkmode')
-    }
-    else {
+    if (body == '') {
         console.log('Lightmode')
         body = "black"
+    }
+    else if (body == 'black') {
+        console.log('Darkmode')
+        document.body.style.background = "#fff"
     }
 }
