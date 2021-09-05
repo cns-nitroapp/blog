@@ -78,10 +78,10 @@ function mode() {
 
     if (usermode == "Darkmode") {
         enableLightmode()
-        document.getElementById("modeicon").style.animation = "rotation 500ms";
+        document.getElementById("modeicon").style.animation = "crotation 500ms";
     }
     else if (usermode == "Lightmode") {
         enableDarkmode()
-        document.getElementById("modeicon").style.animation = "crotation 500ms";
+        document.getElementById("modeicon").style.animation = "rotation 500ms";
     }
 }
