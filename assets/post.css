@@ -52,8 +52,8 @@ body {
       border-top: 0.5px solid #353535
     }
     .author {
-      color: #e7e6fa!important;
-      background-color: #4339f2!important;
+      color: #e7e6fa;
+      background-color: #4339f2;
     }
     .text-black {
       color: rgba(255,255,255,var(--tw-text-opacity));
