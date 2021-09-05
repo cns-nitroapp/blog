@@ -43,7 +43,7 @@ function setMode(value) {
 
 }
 
-function setElements(background, modeicon, titlepadding, color, cataloguetitle, logo, catalogueitem, authorbg, authorcolor, pagination) {
+function setElements(background, modeicon, titlepadding, color, cataloguetitle, logo, catalogueitem, authorbg, authorcolor, pagination, status) {
 
     if ("/"+location.pathname.split('/')[1] == "/") {
         document.getElementById("catalogue-title").style.color = cataloguetitle;
@@ -60,17 +60,18 @@ function setElements(background, modeicon, titlepadding, color, cataloguetitle, 
     document.getElementById("logo").style.filter = logo;   
     document.getElementById("author").style.background = authorbg;
     document.getElementById("author").style.color = authorcolor;
+    document.getElementById("status").src = status
 }
 
 
 function enableDarkmode() {
     setMode("Darkmode");
-    setElements("black", "rotate(180deg)", "#e7e6fa", "#aaa", "#e7e6fa", "invert(0%)", "#aaa", "#4339f2", "#e7e6fa", "#353535");
+    setElements("black", "rotate(180deg)", "#e7e6fa", "#aaa", "#e7e6fa", "invert(0%)", "#aaa", "#4339f2", "#e7e6fa", "#353535", "https://status.constellate.de/embed-status/dark-md");
 }
 
 function enableLightmode() {
     setMode("Lightmode")
-    setElements("#fff", "rotate(0deg)", "#353535", "#555", "#555", "invert(100%)", "#555", "#e7e6fa", "#4339f2", "#e5e5e5");
+    setElements("#fff", "rotate(0deg)", "#353535", "#555", "#555", "invert(100%)", "#555", "#e7e6fa", "#4339f2", "#e5e5e5", "https://status.constellate.de/embed-status/light-md");
 }
 
 function mode() {
