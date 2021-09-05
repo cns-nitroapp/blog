@@ -52,6 +52,9 @@ function setElements(background, modeicon, titlepadding, color, cataloguetitle, 
         for (var i = 0; i < document.getElementsByTagName("h1").length; i++) {
             document.getElementsByTagName("h1")[i].style.color = cataloguetitle;
         }
+        for (var i = 0; i < document.getElementsByClassName("catalogue-item").length; i++) {
+            document.getElementsByClassName("catalogue-item")[i].style.borderColor = pagination;
+        }
         document.getElementById("pagination").style.borderColor = pagination;
     }
 
