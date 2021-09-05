@@ -48,7 +48,7 @@ function setElements(background, modeicon, titlepadding, color, cataloguetitle, 
     if ("/"+location.pathname.split('/')[1] == "/") {
         document.getElementById("catalogue-title").style.color = cataloguetitle;
         document.getElementById("catalogue-item").style.color = catalogueitem;
-        document.getElementById("pagination").style.color = pagination;
+        document.getElementById("pagination").style.borderColor = pagination;
     }
     else {
         document.getElementById("title-padding").style.color = titlepadding;
