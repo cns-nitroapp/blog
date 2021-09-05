@@ -1,4 +1,5 @@
 let colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
+let mode = document.getElementById("mode").innerHTML;
 
 const setColorScheme = e => {
   if (e.matches) {
@@ -17,15 +18,15 @@ colorSchemeQueryList.addListener(setColorScheme);
 
 function enableDarkmode() {
     document.body.style.background = 'black';
+    mode = "Darkmode"
 }
 
 function enableLightmode() {
     document.body.style.background = '#fff';
+    mode = "Lightmode"
 }
 
 function mode() {
-
-    let mode = document.getElementById("mode").innerHTML
 
     if (mode = "Darkmode") {
         enableLightmode()
