@@ -1,10 +1,38 @@
 let colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
 
+const setColorScheme = e => {
+
+    if (getMode() == "Darkmode") {
+        enableDarkmode();
+        return;
+    }
+    else if (getMode() == "Lightmode") {
+        enableLightmode();
+        return;
+    }
+    else {
+        if (e.matches) {
+            // Dark
+            console.log('Darkmode')
+            enableDarkmode()
+        } else {
+            // Light
+            console.log('Lightmode')
+            enableLightmode()
+        }
+    }
+}
+
+setColorScheme(colorSchemeQueryList);
+colorSchemeQueryList.addListener(setColorScheme);
+
 function getMode() {
 
     let mode = document.cookie;
     mode = mode.replace("mode=", "")
     mode = mode.replace("; path=/", "")
+
+    console.log(mode)
 
     return mode;
     
@@ -40,30 +68,3 @@ function mode() {
         enableDarkmode()
     }
 }
-
-
-const setColorScheme = e => {
-
-    if (getMode() == "Darkmode") {
-        enableDarkmode();
-        return;
-    }
-    else if (getMode() == "Lightmode") {
-        enableLightmode();
-        return;
-    }
-    else {
-        if (e.matches) {
-            // Dark
-            console.log('Darkmode')
-            enableDarkmode()
-        } else {
-            // Light
-            console.log('Lightmode')
-            enableLightmode()
-        }
-    }
-}
-
-setColorScheme(colorSchemeQueryList);
-colorSchemeQueryList.addListener(setColorScheme);
