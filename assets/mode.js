@@ -44,12 +44,16 @@ function setMode(value) {
 }
 
 function setElements(background, modeicon, titlepadding, color, cataloguetitle, logo) {
-    document.body.style.background = background;
-    document.getElementById("modeicon").style.transform = modeicon;
-    document.getElementById("title-padding").style.color = titlepadding;
-    document.body.style.color = color;
-    document.getElementById("catalogue-title").style.color = cataloguetitle;
-    document.getElementById("logo").style.filter = logo;
+    try {
+        document.body.style.background = background;
+        document.getElementById("modeicon").style.transform = modeicon;
+        document.getElementById("title-padding").style.color = titlepadding;
+        document.body.style.color = color;
+        document.getElementById("catalogue-title").style.color = cataloguetitle;
+        document.getElementById("logo").style.filter = logo;
+    }
+    catch (e) {
+    }
 }
 
 
