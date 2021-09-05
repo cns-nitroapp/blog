@@ -46,10 +46,10 @@ function setMode(value) {
 function setElements(background, modeicon, titlepadding, color, cataloguetitle, logo, catalogueitem, authorbg, authorcolor, pagination, status, navborder, codebg, code) {
 
     if ("/"+location.pathname.split('/')[1] == "/") {
-        for (var i = 0; i < list.length; i++) {
+        for (var i = 0; i < document.getElementsByTagName("p").length; i++) {
             document.getElementsByTagName("p")[i].style.color = catalogueitem;
         }
-        for (var i = 0; i < list.length; i++) {
+        for (var i = 0; i < document.getElementsByTagName("h1").length; i++) {
             document.getElementsByTagName("h1")[i].style.color = cataloguetitle;
         }
         document.getElementById("pagination").style.borderColor = pagination;
@@ -67,11 +67,11 @@ function setElements(background, modeicon, titlepadding, color, cataloguetitle, 
     document.getElementById("status").src = status
     document.getElementById("nav").style.border = navborder
 
-    for (var i = 0; i < list.length; i++) {
+    for (var i = 0; i < document.getElementsByClassName("author").length; i++) {
         document.getElementsByClassName("author")[i].style.color = authorcolor;
     }
 
-    for (var i = 0; i < list.length; i++) {
+    for (var i = 0; i < document.getElementsByClassName("author").length; i++) {
         document.getElementsByClassName("author")[i].style.background = authorbg;
     }
 
