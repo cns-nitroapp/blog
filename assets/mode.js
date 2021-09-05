@@ -54,9 +54,6 @@ function setElements(background, modeicon, titlepadding, color, cataloguetitle, 
         }
         document.getElementById("pagination").style.borderColor = pagination;
     }
-    else {
-        document.getElementById("title-padding").style.color = titlepadding;
-    }
 
     document.body.style.background = background;
     document.getElementById("modeicon").style.transform = modeicon;
