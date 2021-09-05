@@ -54,7 +54,7 @@ function setElements(background, modeicon, titlepadding, color, cataloguetitle, 
     }
 
     document.body.style.background = background;
-    document.getElementById("modeicon").style.animation = modeicon;
+    document.getElementById("modeicon").style.transform = modeicon;
     document.body.style.color = color;  
     document.getElementById("logo").style.filter = logo;   
     document.getElementById("author").style.background = authorbg + "!important";
@@ -64,12 +64,12 @@ function setElements(background, modeicon, titlepadding, color, cataloguetitle, 
 
 function enableDarkmode() {
     setMode("Darkmode");
-    setElements("black", "rotate(180deg)", "#e7e6fa", "#aaa", "#aaa", "rotation 1s", "#aaa", "#4339f2", "#e7e6fa");
+    setElements("black", "rotation 1s", "#e7e6fa", "#aaa", "#aaa", "invert(0%)", "#aaa", "#4339f2", "#e7e6fa");
 }
 
 function enableLightmode() {
     setMode("Lightmode")
-    setElements("#fff", "rotate(0deg)", "#353535", "#555", "#555", "crotation 1s", "#aaa", "#e7e6fa", "#4339f2");
+    setElements("#fff", "crotation 1s", "#353535", "#555", "#555", "invert(100%)", "#aaa", "#e7e6fa", "#4339f2");
 }
 
 function mode() {
