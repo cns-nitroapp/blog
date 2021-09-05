@@ -27,10 +27,10 @@ function mode() {
 
     let mode = document.getElementById("mode").innerHTML
 
-    if (mode = "Dark") {
+    if (mode = "Darkmode") {
         enableLightmode()
     }
-    else if (mode = "Light") {
+    else if (mode = "Lightmode") {
         enableDarkmode()
     }
 }
