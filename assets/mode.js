@@ -46,7 +46,7 @@ function setMode(value) {
 function setElements(background, modeicon, titlepadding, color, cataloguetitle, logo, catalogueitem, authorbg, authorcolor) {
 
     if ("/"+location.pathname.split('/')[1] == "/") {
-        document.getElementById("catalogue-title").style.color = cataloguetitle + "!important";
+        document.getElementById("catalogue-title").style.color = cataloguetitle;
         document.getElementById("catalogue-item").style.color = catalogueitem;
     }
     else {
