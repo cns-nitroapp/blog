@@ -56,6 +56,7 @@ function setElements(background, modeicon, titlepadding, color, cataloguetitle, 
         document.getElementById("author").style.color = authorcolor + "!important";
     }
     catch (e) {
+        console.log(e);
     }
 }
 
