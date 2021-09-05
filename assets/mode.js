@@ -46,12 +46,12 @@ function setMode(value) {
 function setElements(background, modeicon, titlepadding, color, cataloguetitle, logo, catalogueitem, authorbg, authorcolor, pagination, status, navborder, codebg, code) {
 
     if ("/"+location.pathname.split('/')[1] == "/") {
-        var list= document.getElementsByTagName("p");
         for (var i = 0; i < list.length; i++) {
-            console.log(list[i].style.color); //second console output
+            document.getElementsByTagName("p")[i].style.color = catalogueitem;
         }
-        document.getElementById("catalogue-title").style.color = cataloguetitle;
-        document.getElementById("catalogue-item").style.color = catalogueitem;
+        for (var i = 0; i < list.length; i++) {
+            document.getElementsByTagName("h1")[i].style.color = cataloguetitle;
+        }
         document.getElementById("pagination").style.borderColor = pagination;
     }
     else {
@@ -64,10 +64,17 @@ function setElements(background, modeicon, titlepadding, color, cataloguetitle, 
     document.getElementById("modeicon").style.transform = modeicon;
     document.body.style.color = color;  
     document.getElementById("logo").style.filter = logo;   
-    document.getElementById("author").style.background = authorbg;
-    document.getElementById("author").style.color = authorcolor;
     document.getElementById("status").src = status
     document.getElementById("nav").style.border = navborder
+
+    for (var i = 0; i < list.length; i++) {
+        document.getElementsByClassName("author")[i].style.color = authorcolor;
+    }
+
+    for (var i = 0; i < list.length; i++) {
+        document.getElementsByClassName("author")[i].style.background = authorbg;
+    }
+
 }
 
 
