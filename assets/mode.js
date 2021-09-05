@@ -42,7 +42,7 @@ function enableLightmode() {
 
 function mode() {
 
-    usermode == getMode()
+    var usermode = getMode()
 
     if (usermode == "Darkmode") {
         enableLightmode()
