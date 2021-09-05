@@ -15,7 +15,9 @@ layout: default
   </h1>
 
   {{ content }}
-  <span class="label label-default">[→ Zur Aufgabe]({{ page.link }})</span>
+  {% if page.link %}
+    <span class="label label-default" href={{ page.link }}>{{ page.link }}</span>
+  {%endif%}
 
 </div>
 
