@@ -30,6 +30,7 @@ function getMode() {
 
     let mode = document.cookie;
     mode = mode.replace("mode=", "")
+    mode = mode.replace("; path=/", "")
 
     return mode;
     
@@ -37,7 +38,7 @@ function getMode() {
 
 function setMode(value) {
 
-    document.cookie = "mode=" + value;
+    document.cookie = "mode=" + value + "; path=/";
 
 }
 
