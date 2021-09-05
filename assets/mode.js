@@ -51,6 +51,10 @@ function setElements(background, modeicon, titlepadding, color, cataloguetitle, 
         document.getElementById("pagination").style.borderColor = pagination;
     }
     else {
+        var list= document.getElementsByClassName("catalogue");
+        for (var i = 0; i < list.length; i++) {
+            console.log(list[i].id); //second console output
+        }
         document.getElementById("title-padding").style.color = titlepadding;
     }
 
