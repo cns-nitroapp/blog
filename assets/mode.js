@@ -1,5 +1,5 @@
 function ifLight(mode, boolean) {
-    const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+    let userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
 
     if (mode == 'get') {
         if (userPrefersLight) {
