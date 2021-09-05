@@ -6,7 +6,7 @@ layout: default
 
   <div class="post-info">
     {% if page.date %}
-      <span class="author">{{ page.author }}</span>
+      <span class="author" id="author">{{ page.author }}</span>
       <time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
     {% endif %}
   </div>

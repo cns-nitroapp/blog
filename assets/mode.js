@@ -43,14 +43,17 @@ function setMode(value) {
 
 }
 
-function setElements(background, modeicon, titlepadding, color, cataloguetitle, logo) {
+function setElements(background, modeicon, titlepadding, color, cataloguetitle, logo, catalogueitem, authorbg, authorcolor) {
     try {
         document.body.style.background = background;
         document.getElementById("modeicon").style.transform = modeicon;
         document.getElementById("title-padding").style.color = titlepadding;
         document.body.style.color = color;
-        document.getElementById("catalogue-title").style.color = cataloguetitle;
+        document.getElementById("catalogue-title").style.color = cataloguetitle + "!important";
         document.getElementById("logo").style.filter = logo;
+        document.getElementById("catalogue-item").style.color = catalogueitem;
+        document.getElementById("author").style.background = authorbg + "!important";
+        document.getElementById("author").style.color = authorcolor + "!important";
     }
     catch (e) {
     }
@@ -59,12 +62,12 @@ function setElements(background, modeicon, titlepadding, color, cataloguetitle, 
 
 function enableDarkmode() {
     setMode("Darkmode");
-    setElements("black", "rotate(180deg)", "#e7e6fa", "#aaa", "#aaa", "invert(0%)");
+    setElements("black", "rotate(180deg)", "#e7e6fa", "#aaa", "#aaa", "invert(0%)", "#aaa", "#4339f2", "#e7e6fa");
 }
 
 function enableLightmode() {
     setMode("Lightmode")
-    setElements("#fff", "rotate(0deg)", "#353535", "#555", "#555", "invert(100%");
+    setElements("#fff", "rotate(0deg)", "#353535", "#555", "#555", "invert(100%)", "#aaa", "#e7e6fa", "#4339f2");
 }
 
 function mode() {
