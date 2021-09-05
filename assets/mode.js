@@ -46,9 +46,9 @@ function setMode(value) {
 function setElements(background, modeicon, titlepadding, color, cataloguetitle, logo, catalogueitem, authorbg, authorcolor, pagination, status, navborder, codebg, code) {
 
     if ("/"+location.pathname.split('/')[1] == "/") {
-        var list= document.getElementsByClassName("catalogue");
+        var list= document.getElementsByTagName("p");
         for (var i = 0; i < list.length; i++) {
-            console.log(list[i].id); //second console output
+            console.log(list[i].style.color); //second console output
         }
         document.getElementById("catalogue-title").style.color = cataloguetitle;
         document.getElementById("catalogue-item").style.color = catalogueitem;
