@@ -1,10 +1,10 @@
 let colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
-const bodybg = document.body.style.background;
-const modeicon = document.getElementById("modeicon").style.transform;
-const titlepadding = document.getElementById("title-padding").style.color;
-const bodycolor = document.body.style.color;
-const cataloguetitle = document.getElementById("catalogue-title").style.color;
-const logofilter = document.getElementById("logo").style.filter;
+var bodybg = document.body.style.background;
+var modeicon = document.getElementById("modeicon").style.transform;
+var titlepadding = document.getElementById("title-padding").style.color;
+var bodycolor = document.body.style.color;
+var cataloguetitle = document.getElementById("catalogue-title").style.color;
+var logofilter = document.getElementById("logo").style.filter;
 
 const setColorScheme = e => {
 
