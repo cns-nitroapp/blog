@@ -33,13 +33,13 @@ function setMode(value) {
 function enableDarkmode() {
     setMode("Darkmode")
     document.body.style.background = 'black';
-    document.getElementById('modeicon').style.transform = "rotate(0)"
+    document.getElementById('modeicon').style.transform = "rotate(0deg)"
 }
 
 function enableLightmode() {
     setMode("Lightmode")
     document.body.style.background = '#fff';
-    document.getElementById('modeicon').style.transform = "rotate(180)"
+    document.getElementById('modeicon').style.transform = "rotate(180deg)"
 }
 
 function mode() {
