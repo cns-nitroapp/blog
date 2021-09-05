@@ -43,7 +43,7 @@ function setMode(value) {
 
 }
 
-function setElements(background, modeanimation, modeicon, titlepadding, color, cataloguetitle, logo, catalogueitem, authorbg, authorcolor) {
+function setElements(background, modeicon, titlepadding, color, cataloguetitle, logo, catalogueitem, authorbg, authorcolor) {
 
     if ("/"+location.pathname.split('/')[1] == "/") {
         document.getElementById("catalogue-title").style.color = cataloguetitle + "!important";
@@ -54,7 +54,6 @@ function setElements(background, modeanimation, modeicon, titlepadding, color, c
     }
 
     document.body.style.background = background;
-    document.getElementById("modeicon").style.animation = modeanimation;
     document.getElementById("modeicon").style.transform = modeicon;
     document.body.style.color = color;  
     document.getElementById("logo").style.filter = logo;   
@@ -65,10 +64,12 @@ function setElements(background, modeanimation, modeicon, titlepadding, color, c
 
 function enableDarkmode() {
     setMode("Darkmode");
+    setElements("black", "rotate(180deg)", "#e7e6fa", "#aaa", "#aaa", "invert(0%)", "#aaa", "#4339f2", "#e7e6fa");
 }
 
 function enableLightmode() {
     setMode("Lightmode")
+    setElements("#fff", "rotate(0deg)", "#353535", "#555", "#555", "invert(100%)", "#aaa", "#e7e6fa", "#4339f2");
 }
 
 function mode() {
@@ -77,10 +78,10 @@ function mode() {
 
     if (usermode == "Darkmode") {
         enableLightmode()
-        setElements("#fff", "crotation 500ms", "rotate(0deg)", "#353535", "#555", "#555", "invert(100%)", "#aaa", "#e7e6fa", "#4339f2");
+        document.getElementById("modeicon").style.animation = "rotation 500ms";
     }
     else if (usermode == "Lightmode") {
         enableDarkmode()
-        setElements("black", "rotation 500ms", "rotate(180deg)", "#e7e6fa", "#aaa", "#aaa", "invert(0%)", "#aaa", "#4339f2", "#e7e6fa");
+        document.getElementById("modeicon").style.animation = "crotation 500ms";
     }
 }
