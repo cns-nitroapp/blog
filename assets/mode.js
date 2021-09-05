@@ -17,10 +17,12 @@ function ifLight(mode, boolean) {
 
 function enableDarkmode() {
     document.body.style.background = 'black';
+    ifLight('set', false);
 }
 
 function enableLightmode() {
     document.body.style.background = '#fff';
+    ifLight('set', true)
 }
 
 function mode() {
