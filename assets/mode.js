@@ -57,8 +57,8 @@ function setElements(background, modeicon, titlepadding, color, cataloguetitle, 
     document.getElementById("modeicon").style.transform = modeicon;
     document.body.style.color = color;  
     document.getElementById("logo").style.filter = logo;   
-    document.getElementById("author").style.background = authorbg + "!important";
-    document.getElementById("author").style.color = authorcolor + "!important";
+    document.getElementById("author").style.background = authorbg;
+    document.getElementById("author").style.color = authorcolor;
 }
 
 
