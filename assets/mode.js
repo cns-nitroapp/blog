@@ -17,7 +17,7 @@ colorSchemeQueryList.addListener(setColorScheme);
 
 function getMode() {
 
-    let mode = document.getElementById("mode").innerHTML;
+    let mode = document.cookie;
 
     return mode;
     
@@ -25,7 +25,7 @@ function getMode() {
 
 function setMode(value) {
 
-    document.getElementById("mode").innerHTML = value;
+    document.cookie = "username=" + value;
 
 }
 
@@ -33,13 +33,13 @@ function setMode(value) {
 function enableDarkmode() {
     setMode("Darkmode")
     document.body.style.background = 'black';
-    document.getElementById('modeicon').style.transform = "rotate(0deg)"
+    document.getElementById('modeicon').style.transform = "rotate(180deg)"
 }
 
 function enableLightmode() {
     setMode("Lightmode")
     document.body.style.background = '#fff';
-    document.getElementById('modeicon').style.transform = "rotate(180deg)"
+    document.getElementById('modeicon').style.transform = "rotate(0deg)"
 }
 
 function mode() {
