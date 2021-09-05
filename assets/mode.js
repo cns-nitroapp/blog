@@ -43,23 +43,31 @@ function setMode(value) {
 
 }
 
+const bodybg = document.body.style.background;
+const modeicon = document.getElementById("modeicon").style.transform;
+const titlepadding = document.getElementById("title-padding").style.color;
+const bodycolor = document.body.style.color;
+const cataloguetitle = document.getElementById("catalogue-title").style.color;
+const logofilter = document.getElementById("logo").style.filter;
 
 function enableDarkmode() {
     setMode("Darkmode")
-    document.body.style.background = 'black';
-    document.getElementById("modeicon").style.transform = "rotate(180deg)";
-    document.getElementById("title-padding").style.color = "#e7e6fa";
-    document.body.style.color = "#aaa";
-    document.getElementById("logo").style.filter = "invert(0%)"
+    bodybg = 'black';
+    modeicon = "rotate(180deg)";
+    titlepadding = "#e7e6fa";
+    bodycolor = "#aaa";
+    cataloguetitle = "#aaa";
+    logofilter = "invert(0%)";
 }
 
 function enableLightmode() {
     setMode("Lightmode")
-    document.body.style.background = '#fff';
-    document.getElementById("modeicon").style.transform = "rotate(0deg)";
-    document.getElementById("title-padding").style.color = "#353535";
-    document.body.style.color = "#555";
-    document.getElementById("logo").style.filter = "invert(100%)"
+    bodybg = '#fff';
+    modeicon= "rotate(0deg)";
+    titlepadding = "#353535";
+    bodycolor = "#555";
+    cataloguetitle = "#555";
+    logofilter = "invert(100%)";
 }
 
 function mode() {
