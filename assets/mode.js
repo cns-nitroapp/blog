@@ -70,7 +70,7 @@ function enableDarkmode() {
 
 function enableLightmode() {
     setMode("Lightmode")
-    setElements("#fff", "rotate(0deg)", "#353535", "#555", "#555", "invert(100%)", "#aaa", "#e7e6fa", "#4339f2", "#e5e5e5");
+    setElements("#fff", "rotate(0deg)", "#353535", "#555", "#555", "invert(100%)", "#555", "#e7e6fa", "#4339f2", "#e5e5e5");
 }
 
 function mode() {
