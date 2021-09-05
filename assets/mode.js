@@ -43,11 +43,12 @@ function setMode(value) {
 
 }
 
-function setElements(background, modeicon, titlepadding, color, cataloguetitle, logo, catalogueitem, authorbg, authorcolor) {
+function setElements(background, modeicon, titlepadding, color, cataloguetitle, logo, catalogueitem, authorbg, authorcolor, pagination) {
 
     if ("/"+location.pathname.split('/')[1] == "/") {
         document.getElementById("catalogue-title").style.color = cataloguetitle;
         document.getElementById("catalogue-item").style.color = catalogueitem;
+        document.getElementById("pagination").style.color = pagination;
     }
     else {
         document.getElementById("title-padding").style.color = titlepadding;
@@ -64,7 +65,7 @@ function setElements(background, modeicon, titlepadding, color, cataloguetitle, 
 
 function enableDarkmode() {
     setMode("Darkmode");
-    setElements("black", "rotate(180deg)", "#e7e6fa", "#aaa", "#aaa", "invert(0%)", "#aaa", "#4339f2", "#e7e6fa");
+    setElements("black", "rotate(180deg)", "#e7e6fa", "#aaa", "#e7e6fa", "invert(0%)", "#aaa", "#4339f2", "#e7e6fa");
 }
 
 function enableLightmode() {
