@@ -1,5 +1,6 @@
 body {
   transition: all 300ms;
+  transition: transform 1s;
 }
 
 .author {
