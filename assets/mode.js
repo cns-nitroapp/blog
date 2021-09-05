@@ -4,11 +4,11 @@ const setColorScheme = e => {
   if (e.matches) {
     // Dark
     console.log('Darkmode')
-    document.getElementById("demo").innerHTML = "Darkmode"
+    document.getElementById("mode").innerHTML = "Darkmode";
   } else {
     // Light
     console.log('Lightmode')
-    document.getElementById("mode").innerHTML = "Lightmode"
+    document.getElementById("mode").innerHTML = "Lightmode";
   }
 }
 
