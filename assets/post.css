@@ -81,13 +81,13 @@ body {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
   }
 }
 
 @keyframes crotation {
   from {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
   }
   to {
     transform: rotate(0deg);
