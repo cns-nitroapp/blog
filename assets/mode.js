@@ -54,7 +54,7 @@ function setElements(background, modeicon, titlepadding, color, cataloguetitle, 
     }
 
     document.body.style.background = background;
-    document.getElementById("modeicon").style.transform = modeicon;
+    document.getElementById("modeicon").style.animation = modeicon;
     document.body.style.color = color;  
     document.getElementById("logo").style.filter = logo;   
     document.getElementById("author").style.background = authorbg + "!important";
