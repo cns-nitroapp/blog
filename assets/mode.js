@@ -4,11 +4,11 @@ const setColorScheme = e => {
   if (e.matches) {
     // Dark
     console.log('Darkmode')
-    document.getElementById("mode").innerHTML = "Darkmode";
+    enableDarkmode()
   } else {
     // Light
     console.log('Lightmode')
-    document.getElementById("mode").innerHTML = "Lightmode";
+    enableLightmode()
   }
 }
 
@@ -31,13 +31,15 @@ function setMode(value) {
 
 
 function enableDarkmode() {
-    document.body.style.background = 'black';
     setMode("Darkmode")
+    document.body.style.background = 'black';
+    document.getElementById('modeicon').style.transform = "rotate(0)"
 }
 
 function enableLightmode() {
-    document.body.style.background = '#fff';
     setMode("Lightmode")
+    document.body.style.background = '#fff';
+    document.getElementById('modeicon').style.transform = "rotate(180)"
 }
 
 function mode() {
