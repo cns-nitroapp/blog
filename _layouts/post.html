@@ -16,7 +16,7 @@ layout: default
 
   {{ content }}
   {% if page.attachments%}
-    <span class="label label-default">📁 {{ page.attachments }}</span>
+    <span class="label label-default">📁 <br>{{ page.attachments }}</span>
   {%endif%}
   {% if page.link %}
     <span class="label label-default"><a href={{ page.link }}>🔗 {{ page.link }}</a></span>
