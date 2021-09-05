@@ -9,14 +9,14 @@ layout: default
     {% endif %}
   {% endfor %}
   {% for post in paginator.posts %}
-    <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
+    <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item" id="catalogue-item">
       <div>
         <span class="author" id="author">{{ post.author }}</span>
         <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
         <h1 class="catalogue-title" id="catalogue-title">{{ post.title }}</h1>
         <div class="catalogue-line"></div>
 
-        <p class="catalogue-item" id="catalogue-item">
+        <p class="catalogue-item">
           {{ post.content | strip_html | truncatewords: 65 }}
         </p>
 
