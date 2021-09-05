@@ -1,10 +1,4 @@
 let colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
-var bodybg = document.body.style.background;
-var modeicon = document.getElementById("modeicon").style.transform;
-var titlepadding = document.getElementById("title-padding").style.color;
-var bodycolor = document.body.style.color;
-var cataloguetitle = document.getElementById("catalogue-title").style.color;
-var logofilter = document.getElementById("logo").style.filter;
 
 const setColorScheme = e => {
 
@@ -49,24 +43,24 @@ function setMode(value) {
 
 }
 
+function setElements(background, modeicon, titlepadding, color, cataloguetitle, logo) {
+    document.body.style.background = background;
+    document.getElementById("modeicon").style.transform = modeicon;
+    document.getElementById("title-padding").style.color = titlepadding;
+    document.body.style.color = color;
+    document.getElementById("catalogue-title").style.color = cataloguetitle;
+    document.getElementById("logo").style.filter = logo;
+}
+
+
 function enableDarkmode() {
-    setMode("Darkmode")
-    bodybg = 'black';
-    modeicon = "rotate(180deg)";
-    titlepadding = "#e7e6fa";
-    bodycolor = "#aaa";
-    cataloguetitle = "#aaa";
-    logofilter = "invert(0%)";
+    setMode("Darkmode");
+    setElements("black", "rotate(180deg)", "#e7e6fa", "#aaa", "#aaa", "invert(0%)");
 }
 
 function enableLightmode() {
     setMode("Lightmode")
-    bodybg = '#fff';
-    modeicon= "rotate(0deg)";
-    titlepadding = "#353535";
-    bodycolor = "#555";
-    cataloguetitle = "#555";
-    logofilter = "invert(100%)";
+    setElements("#fff", "rotate(0deg)", "#353535", "#555", "#555", "invert(100%");
 }
 
 function mode() {
