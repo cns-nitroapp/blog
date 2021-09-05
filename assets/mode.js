@@ -1,19 +1,19 @@
-function ifLight(mode, boolean) {
-    let userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+let colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
 
-    if (mode == 'get') {
-        if (userPrefersLight) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-    else if (mode == 'set') {
-        userPrefersLight = boolean
-    }
-
+const setColorScheme = e => {
+  if (e.matches) {
+    // Dark
+    console.log('Darkmode')
+    document.getElementById("demo").innerHTML = "Dark"
+  } else {
+    // Light
+    console.log('Lightmode')
+    document.getElementById("mode").innerHTML = "Light"
+  }
 }
+
+setColorScheme(colorSchemeQueryList);
+colorSchemeQueryList.addListener(setColorScheme);
 
 function enableDarkmode() {
     document.body.style.background = 'black';
@@ -27,13 +27,12 @@ function enableLightmode() {
 
 function mode() {
 
-    if (ifLight('get', '') == false) {
-        console.log('Previously Darkmode - Changed to Lightmode');
-        enableLightmode();
-    }
-    else if (ifLight('get', '') == true) {
-        console.log('Previously Lightmode - Changed to Darkmode');
-        enableDarkmode();
-    }
+    let mode = document.getElementById("mode").innerHTML
 
+    if (mode = "Dark") {
+        enableLightmode()
+    }
+    else if (mode = "Light") {
+        enableDarkmode()
+    }
 }
