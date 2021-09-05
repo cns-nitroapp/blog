@@ -77,6 +77,9 @@ body {
     .nav a {
       color: #ccc
     }
+    .nav {
+      box-shadow: 0 3px 2px -2px rgb(53, 53, 53);
+    }
 }
 
 @keyframes rotation {
