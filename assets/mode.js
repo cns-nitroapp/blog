@@ -65,12 +65,12 @@ function setElements(background, modeanimation, modeicon, titlepadding, color, c
 
 function enableDarkmode() {
     setMode("Darkmode");
-    setElements("black", "rotation 300ms", "rotate(180deg)", "#e7e6fa", "#aaa", "#aaa", "invert(0%)", "#aaa", "#4339f2", "#e7e6fa");
+    setElements("black", "rotation 500ms", "rotate(180deg)", "#e7e6fa", "#aaa", "#aaa", "invert(0%)", "#aaa", "#4339f2", "#e7e6fa");
 }
 
 function enableLightmode() {
     setMode("Lightmode")
-    setElements("#fff", "crotation 300ms", "rotate(0deg)", "#353535", "#555", "#555", "invert(100%)", "#aaa", "#e7e6fa", "#4339f2");
+    setElements("#fff", "crotation 500ms", "rotate(0deg)", "#353535", "#555", "#555", "invert(100%)", "#aaa", "#e7e6fa", "#4339f2");
 }
 
 function mode() {
