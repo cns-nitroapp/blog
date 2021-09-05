@@ -1,5 +1,4 @@
 let colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
-let mode = document.getElementById("mode").innerHTML;
 
 const setColorScheme = e => {
   if (e.matches) {
@@ -16,22 +15,37 @@ const setColorScheme = e => {
 setColorScheme(colorSchemeQueryList);
 colorSchemeQueryList.addListener(setColorScheme);
 
+function getMode() {
+
+    let mode = document.getElementById("mode").innerHTML;
+
+    return mode;
+    
+}
+
+function setMode(value) {
+
+    document.getElementById("mode").innerHTML = value;
+
+}
+
+
 function enableDarkmode() {
     document.body.style.background = 'black';
-    mode = "Darkmode"
+    setMode("Darkmode")
 }
 
 function enableLightmode() {
     document.body.style.background = '#fff';
-    mode = "Lightmode"
+    setMode("Lightmode")
 }
 
 function mode() {
 
-    if (mode = "Darkmode") {
+    if (getMode() = "Darkmode") {
         enableLightmode()
     }
-    else if (mode = "Lightmode") {
+    else if (getMode() = "Lightmode") {
         enableDarkmode()
     }
 }
