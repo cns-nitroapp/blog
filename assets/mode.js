@@ -61,7 +61,9 @@ function setElements(background, modeicon, titlepadding, color, cataloguetitle, 
     else if (location.pathname.split('/')[1].startsWith("page")) {
         home()
     }
-    else {}
+    else {
+        document.getElementById("title-padding").style.color = titlepadding;
+    }
 
     document.body.style.background = background;
     document.getElementById("modeicon").style.transform = modeicon;
