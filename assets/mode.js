@@ -1,15 +1,26 @@
 let colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
 
 const setColorScheme = e => {
-  if (e.matches) {
-    // Dark
-    console.log('Darkmode')
-    enableDarkmode()
-  } else {
-    // Light
-    console.log('Lightmode')
-    enableLightmode()
-  }
+
+    if (getMode() == "Darkmode") {
+        enableDarkmode();
+        return;
+    }
+    else if (getMode() == "Lightmode") {
+        enableLightmode();
+        return;
+    }
+    else {
+        if (e.matches) {
+            // Dark
+            console.log('Darkmode')
+            enableDarkmode()
+        } else {
+            // Light
+            console.log('Lightmode')
+            enableLightmode()
+        }
+    }
 }
 
 setColorScheme(colorSchemeQueryList);
