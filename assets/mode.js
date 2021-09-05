@@ -4,11 +4,9 @@ const setColorScheme = e => {
 
     if (getMode() == "Darkmode") {
         enableDarkmode();
-        return;
     }
     else if (getMode() == "Lightmode") {
         enableLightmode();
-        return;
     }
     else {
         if (e.matches) {
