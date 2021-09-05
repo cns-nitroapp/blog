@@ -67,7 +67,7 @@ function setElements(background, modeicon, titlepadding, color, cataloguetitle, 
 
 function enableDarkmode() {
     setMode("Darkmode");
-    setElements("black", "rotate(180deg)", "#e7e6fa", "#aaa", "#e7e6fa", "invert(0%)", "#aaa", "#4339f2", "#e7e6fa", "#353535", "https://status.constellate.de/embed-status/dark-md", "0 3px 2px -2px rgb(53, 53, 53)");
+    setElements("black", "rotate(180deg)", "#e7e6fa", "#aaa", "#e7e6fa", "invert(0%)", "#aaa", "#4339f2", "#e7e6fa", "#353535", "https://status.constellate.de/embed-status/dark-md", "0 2px 2px -2px rgb(53, 53, 53)");
 }
 
 function enableLightmode() {
