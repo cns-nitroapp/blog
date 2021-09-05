@@ -44,20 +44,21 @@ function setMode(value) {
 }
 
 function setElements(background, modeicon, titlepadding, color, cataloguetitle, logo, catalogueitem, authorbg, authorcolor) {
-    try {
-        document.body.style.background = background;
-        document.getElementById("modeicon").style.transform = modeicon;
-        document.getElementById("title-padding").style.color = titlepadding;
-        document.body.style.color = color;
+
+    if ("/"+location.pathname.split('/')[1] == "/") {
         document.getElementById("catalogue-title").style.color = cataloguetitle + "!important";
-        document.getElementById("logo").style.filter = logo;
         document.getElementById("catalogue-item").style.color = catalogueitem;
-        document.getElementById("author").style.background = authorbg + "!important";
-        document.getElementById("author").style.color = authorcolor + "!important";
     }
-    catch (e) {
-        console.log(e);
+    else {
+        document.getElementById("title-padding").style.color = titlepadding;
     }
+
+    document.body.style.background = background;
+    document.getElementById("modeicon").style.transform = modeicon;
+    document.body.style.color = color;  
+    document.getElementById("logo").style.filter = logo;   
+    document.getElementById("author").style.background = authorbg + "!important";
+    document.getElementById("author").style.color = authorcolor + "!important";
 }
 
 
