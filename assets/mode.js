@@ -1,4 +1,10 @@
 let colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
+const bodybg = document.body.style.background;
+const modeicon = document.getElementById("modeicon").style.transform;
+const titlepadding = document.getElementById("title-padding").style.color;
+const bodycolor = document.body.style.color;
+const cataloguetitle = document.getElementById("catalogue-title").style.color;
+const logofilter = document.getElementById("logo").style.filter;
 
 const setColorScheme = e => {
 
@@ -42,13 +48,6 @@ function setMode(value) {
     document.getElementById("mode").innerHTML = value;
 
 }
-
-const bodybg = document.body.style.background;
-const modeicon = document.getElementById("modeicon").style.transform;
-const titlepadding = document.getElementById("title-padding").style.color;
-const bodycolor = document.body.style.color;
-const cataloguetitle = document.getElementById("catalogue-title").style.color;
-const logofilter = document.getElementById("logo").style.filter;
 
 function enableDarkmode() {
     setMode("Darkmode")
