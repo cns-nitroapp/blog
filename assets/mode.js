@@ -56,8 +56,6 @@ function setElements(background, modeicon, titlepadding, color, cataloguetitle, 
     }
     else {
         document.getElementById("title-padding").style.color = titlepadding;
-        document.getElementById("code").style.background = codebg;
-        document.getElementById("code").style.color = code;
     }
 
     document.body.style.background = background;
