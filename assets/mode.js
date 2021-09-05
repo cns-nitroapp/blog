@@ -72,7 +72,7 @@ function enableDarkmode() {
 
 function enableLightmode() {
     setMode("Lightmode")
-    setElements("#fff", "rotate(0deg)", "#353535", "#555", "#555", "invert(100%)", "#555", "#e7e6fa", "#4339f2", "#e5e5e5", "https://status.constellate.de/embed-status/light-md", "0 2px 2px -2px rgb(0 0 0 / 20%)");
+    setElements("#fff", "rotate(0deg)", "#353535", "#rgb(85, 85, 85)", "#555", "invert(100%)", "#555", "#e7e6fa", "#4339f2", "#e5e5e5", "https://status.constellate.de/embed-status/light-md", "0 2px 2px -2px rgb(0 0 0 / 20%)");
 }
 
 function mode() {
