@@ -18,6 +18,7 @@ colorSchemeQueryList.addListener(setColorScheme);
 function getMode() {
 
     let mode = document.cookie;
+    mode = mode.replace("mode=", "")
 
     return mode;
     
@@ -25,7 +26,7 @@ function getMode() {
 
 function setMode(value) {
 
-    document.cookie = "username=" + value;
+    document.cookie = "mode=" + value;
 
 }
 
