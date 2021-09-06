@@ -39,7 +39,7 @@ function getMode() {
 function setMode(value) {
 
     document.cookie = "mode=" + value + "; path=/";
-    document.getElementById("mode").innerHTML = value;
+    //document.getElementById("mode").innerHTML = value;
 
 }
 
