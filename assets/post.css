@@ -27,9 +27,9 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    .status {
+    /*.status {
       display: none;
-    }
+    }*/
   }
 
 @media (prefers-color-scheme: dark) {
