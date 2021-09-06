@@ -88,12 +88,12 @@ function setElements(background, modeicon, titlepadding, color, cataloguetitle, 
 
 function enableDarkmode() {
     setMode("Darkmode");
-    setElements("black", "rotate(180deg)", "#e7e6fa", "#aaa", "#e7e6fa", "invert(0%)", "#aaa", "#4339f2", "#e7e6fa", "#353535", "https://status.constellate.de/embed-status/dark-md", "0 2px 2px -2px rgb(53, 53, 53)", "#212121", "#f7f7f7");
+    setElements("black", "rotate(180deg)", "#e7e6fa", "#aaa", "#e7e6fa", "invert(0%)", "#aaa", "#4339f2", "#e7e6fa", "#353535", "https://status.constellate.de/de/embed-status/dark-md", "0 2px 2px -2px rgb(53, 53, 53)", "#212121", "#f7f7f7");
 }
 
 function enableLightmode() {
     setMode("Lightmode")
-    setElements("#fff", "rotate(0deg)", "#353535", "rgb(85, 85, 85)", "#555", "invert(100%)", "#555", "#e7e6fa", "#4339f2", "#e5e5e5", "https://status.constellate.de/embed-status/light-md", "0 2px 2px -2px rgb(0 0 0 / 20%)", "#f9f9f9", "#aaa");
+    setElements("#fff", "rotate(0deg)", "#353535", "rgb(85, 85, 85)", "#555", "invert(100%)", "#555", "#e7e6fa", "#4339f2", "#e5e5e5", "https://status.constellate.de/de/embed-status/light-md", "0 2px 2px -2px rgb(0 0 0 / 20%)", "#f9f9f9", "#aaa");
 }
 
 function mode() {
